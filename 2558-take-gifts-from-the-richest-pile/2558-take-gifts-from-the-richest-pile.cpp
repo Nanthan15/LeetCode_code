@@ -1,32 +1,17 @@
-#include <iostream>
-#include <vector>
-#include <cmath>
-#include <algorithm>
-
 class Solution {
 public:
-    long long pickGifts(std::vector<int>& gifts, int k) {
-        // Sort gifts in ascending order initially
-        sort(gifts.begin(), gifts.end());
-
-        long long sum = 0;
-        int n = gifts.size();
-
-        // Loop to apply k operations
-        while(k > 0) {
-            // Reduce the largest gift (last element) by taking its square root
-            gifts[n - 1] = floor(sqrt(gifts[n - 1]));
-
-            // Re-sort the vector after the modification
-            sort(gifts.begin(), gifts.end());
-            k--;  // Decrease the remaining operations
+    long long pickGifts(vector<int>& gifts, int k) {
+        priority_queue<int>q;
+        long long ans=0;
+        for(int i:gifts){q.push(i);ans+=i;}
+        while(k--)
+        {
+            int v=q.top();
+            ans-=(v-sqrt(v));
+            q.pop();
+            q.push(sqrt(v));
         }
-
-        // Sum up the final values of the gifts
-        for (auto it : gifts) {
-            sum += it;
-        }
-
-        return sum;
+        return ans;
+        
     }
 };
