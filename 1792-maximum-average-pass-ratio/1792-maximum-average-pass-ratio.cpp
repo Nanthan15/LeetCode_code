@@ -1,54 +1,32 @@
 class Solution {
-    public double maxAverageRatio(int[][] classes, int extraStudents) {
-        PriorityQueue<ClassRecord> pq = new PriorityQueue<>(new Compare());
-        
-        for(int[] cl : classes)
-            pq.add(new ClassRecord(cl));
-        
-        ClassRecord cl;
-        while(extraStudents-- > 0)
-            pq.add(pq.remove().addOneStudent());
-        
-        double sum = 0;
-        while(!pq.isEmpty()){
-            cl = pq.remove();
-            sum += (double)cl.pass / cl.total;
+public:
+    double maxAverageRatio(vector<vector<int>>& classes, int extraStudents) {
+        auto gain = [](double pass, double total) {
+            return (pass + 1) / (total + 1) - pass / total;
+        };
+
+        priority_queue<pair<double, pair<int, int>>> maxHeap;
+
+        double sum = 0.0;
+
+        for (const auto& cls : classes) {
+            int pass = cls[0], total = cls[1];
+            sum += (double)pass / total;  
+            maxHeap.push({gain(pass, total), {pass, total}});
         }
 
-        return sum / classes.length;
-    }
-}
+        for (int i = 0; i < extraStudents; ++i) {
+            auto [currentGain, data] = maxHeap.top(); maxHeap.pop();
+            int pass = data.first, total = data.second;
 
-class ClassRecord{
-    int pass;
-    int total;
-    double inc;
+            sum -= (double)pass / total;
+            pass += 1;
+            total += 1;
+            sum += (double)pass / total;
 
-    public ClassRecord(int[] array){
-        pass = array[0];
-        total = array[1];
-        inc = getIncrement();
-    }
+            maxHeap.push({gain(pass, total), {pass, total}});
+        }
 
-    public ClassRecord addOneStudent(){
-        pass++;
-        total++;
-        inc = getIncrement();
-        return this;
+        return sum / classes.size();
     }
-
-    private double getIncrement(){
-        return (pass + 1.0) / (total + 1) - (double)pass / total;
-    }
-}
-
-class Compare implements Comparator<ClassRecord>{
-    public int compare(ClassRecord a, ClassRecord b){
-        if(a.inc < b.inc)
-            return 1;
-        else if(a.inc > b.inc)
-            return -1;
-        else
-            return 0;
-    }
-}
+};
