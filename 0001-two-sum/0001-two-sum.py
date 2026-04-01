@@ -1,11 +1,9 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        item = {}
+        mp = {}
 
-        for ind, val in enumerate(nums):
-            remain = target - val
-            if remain in item:
-                return[item[remain], ind]
-            item[val] =  ind
-        return []        
-        
+        for i in range(len(nums)):
+            req = target - nums[i]
+            if req in mp:
+                return (mp[req], i)
+            mp[nums[i]] = i
