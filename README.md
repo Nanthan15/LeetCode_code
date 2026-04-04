@@ -10,6 +10,7 @@ ALl revise code
 | [0014-longest-common-prefix](https://github.com/Nanthan15/LeetCode_code/tree/main/0014-longest-common-prefix/) | Easy |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/Nanthan15/LeetCode_code/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0027-remove-element](https://github.com/Nanthan15/LeetCode_code/tree/main/0027-remove-element/) | Easy |
+| [0075-sort-colors](https://github.com/Nanthan15/LeetCode_code/tree/main/0075-sort-colors/) | Medium |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -27,4 +28,9 @@ ALl revise code
 | ------- | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/Nanthan15/LeetCode_code/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0027-remove-element](https://github.com/Nanthan15/LeetCode_code/tree/main/0027-remove-element/) | Easy |
+| [0075-sort-colors](https://github.com/Nanthan15/LeetCode_code/tree/main/0075-sort-colors/) | Medium |
+## Sorting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0075-sort-colors](https://github.com/Nanthan15/LeetCode_code/tree/main/0075-sort-colors/) | Medium |
 <!---LeetCode Topics End-->
