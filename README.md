@@ -11,10 +11,12 @@ ALl revise code
 | [0026-remove-duplicates-from-sorted-array](https://github.com/Nanthan15/LeetCode_code/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0027-remove-element](https://github.com/Nanthan15/LeetCode_code/tree/main/0027-remove-element/) | Easy |
 | [0075-sort-colors](https://github.com/Nanthan15/LeetCode_code/tree/main/0075-sort-colors/) | Medium |
+| [0169-majority-element](https://github.com/Nanthan15/LeetCode_code/tree/main/0169-majority-element/) | Easy |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/Nanthan15/LeetCode_code/tree/main/0001-two-sum/) | Easy |
+| [0169-majority-element](https://github.com/Nanthan15/LeetCode_code/tree/main/0169-majority-element/) | Easy |
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -33,4 +35,13 @@ ALl revise code
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0075-sort-colors](https://github.com/Nanthan15/LeetCode_code/tree/main/0075-sort-colors/) | Medium |
+| [0169-majority-element](https://github.com/Nanthan15/LeetCode_code/tree/main/0169-majority-element/) | Easy |
+## Divide and Conquer
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0169-majority-element](https://github.com/Nanthan15/LeetCode_code/tree/main/0169-majority-element/) | Easy |
+## Counting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0169-majority-element](https://github.com/Nanthan15/LeetCode_code/tree/main/0169-majority-element/) | Easy |
 <!---LeetCode Topics End-->
